@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 510px;
+}
+
+body {
+    background: linear-gradient(to bottom, #eee 0%, #ddd 100%);
+    color: #333;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-size: 14px;
+}

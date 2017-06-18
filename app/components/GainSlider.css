@@ -1,0 +1,60 @@
+div.slider {
+    display: inline-block;
+    padding: 5px;
+    text-align: center;
+    width: 45px;
+}
+
+div.label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+div.range {
+    position: relative;
+    height: 150px;
+}
+
+div.range input {
+    -webkit-appearance: none;
+    background: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 150px;
+}
+
+div.range input::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    background: linear-gradient(to left, #1abc9c 0%, #16a085 100%) 0 0 repeat-y, #ccc;
+    background-size: 100% 100%, 100%;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 0;
+    padding: 4px;
+}
+
+div.range.disabled input::-webkit-slider-runnable-track {
+    background: linear-gradient(to left, #aaa 0%, #999 100%) 0 0 repeat-y, #ccc;
+}
+
+div.range input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: linear-gradient(to left, #eee 0%, white 100%);
+    border-radius: 50%;
+    border: 1px solid white;
+    box-shadow: -1px 0 1px #999;
+    cursor: ns-resize;
+    height: 24px;
+    margin-top: -12px;
+    width: 24px;
+}
+
+div.range input:focus {
+    outline: none; /* TODO: fix 32 band from being default selected */
+}
+
+div.value {
+    font-size: 0.8em;
+    margin-top: 5px;
+}

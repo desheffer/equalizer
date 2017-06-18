@@ -1,0 +1,63 @@
+header.header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 5px;
+}
+
+header.header h1 {
+    float: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 5px;
+}
+
+label.switch {
+    display: inline-block;
+    float: right;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+label.switch input {
+    display: none;
+}
+
+div.slider {
+    background: linear-gradient(to bottom, #999 0%, #aaa 100%);
+    border-radius: 17px;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+
+div.slider:before {
+    background: linear-gradient(to bottom, #eee 0%, white 100%);
+    border-radius: 50%;
+    border: 1px solid white;
+    bottom: 4px;
+    box-shadow: 0 1px 1px #999;
+    content: "";
+    height: 24px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 24px;
+}
+
+input:checked + div.slider {
+    background: linear-gradient(to bottom, #16a085 0%, #1abc9c 100%);
+}
+
+input:focus + div.slider:before {
+    box-shadow: 0 0 5px #1abc9c;
+}
+
+input:checked + div.slider:before {
+    transform: translateX(26px);
+}
