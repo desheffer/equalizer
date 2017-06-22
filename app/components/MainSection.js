@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Header from '../components/Header';
+import PowerSlider from '../components/PowerSlider';
 import GainSlider from './GainSlider';
 import Bands from '../constants/Bands';
 import Presets from '../constants/Presets';
@@ -27,7 +27,10 @@ export default class MainSection extends Component {
 
         return (
             <div>
-                <Header power={equalizer.power} {...actions} />
+                <header className={style.header}>
+                    <h1>Equalizer</h1>
+                    <PowerSlider power={equalizer.power} {...actions} />
+                </header>
                 <div className={style.equalizer}>
                     {Bands.map((band, i) =>
                         <GainSlider key={band.freq} index={i} label={band.label} gain={equalizer.gains[i]} disabled={!equalizer.power} {...actions} />

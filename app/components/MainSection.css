@@ -1,3 +1,17 @@
+header.header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 5px;
+}
+
+header.header h1 {
+    float: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 5px;
+}
+
 div.equalizer {
     margin-bottom: 10px;
     margin-top: 10px;
