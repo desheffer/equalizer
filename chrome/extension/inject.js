@@ -74,7 +74,7 @@ window.addEventListener('load', () => {
     chrome.runtime.onMessage.addListener((message) => {
         if (message === 'update') {
             chrome.storage.local.get('state', (obj) => {
-                const state = JSON.parse(obj.state || '{}');
+                const state = JSON.parse(obj.state);
 
                 const power = state.equalizer.power;
                 const gains = state.equalizer.gains;

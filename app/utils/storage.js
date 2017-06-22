@@ -2,12 +2,18 @@ function saveState(state) {
     chrome.storage.local.set({ state: JSON.stringify(state) });
 }
 
-function triggerUpdate() {
+function updatePage(state) {
     chrome.tabs.query({}, (tabs) => {
         tabs.forEach((tab) => {
             chrome.tabs.sendMessage(tab.id, 'update');
         });
     });
+}
+
+function updateIcon(state) {
+    const path = state.equalizer.power ? 'img/icon-32.png' : 'img/icon-off-32.png';
+
+    chrome.browserAction.setIcon({ path });
 }
 
 export default function () {
@@ -17,7 +23,8 @@ export default function () {
         store.subscribe(() => {
             const state = store.getState();
             saveState(state);
-            triggerUpdate();
+            updatePage(state);
+            updateIcon(state);
         });
 
         return store;

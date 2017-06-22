@@ -28,3 +28,4 @@ promisifyAll(chrome.storage, [
 ]);
 
 require('./background/inject');
+require('./background/icon');

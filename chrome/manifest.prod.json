@@ -4,7 +4,8 @@
     "version": "0.1.0",
     "description": "An audio equalizer in your browser",
     "icons": {
-        "128": "img/icon.png"
+        "256": "img/icon-256.png",
+        "32": "img/icon-32.png"
     },
     "browser_action": {
         "default_title": "Equalizer",
