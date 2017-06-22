@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import PowerSlider from '../components/PowerSlider';
 import GainSlider from './GainSlider';
+import PresetSelector from './PresetSelector';
 import Bands from '../constants/Bands';
 import Presets from '../constants/Presets';
 import style from './MainSection.css';
@@ -11,16 +12,6 @@ export default class MainSection extends Component {
         equalizer: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
     };
-
-    // XXX
-    handleReset = (evt) => {
-        const { actions } = this.props;
-        const index = evt.target.value;
-
-        Presets[index].gains.forEach((gain, i) => {
-            actions.setGain(i, gain);
-        });
-    }
 
     render() {
         const { equalizer, actions } = this.props;
@@ -37,9 +28,7 @@ export default class MainSection extends Component {
                     )}
                 </div>
                 <div className={style.presets}>
-                    {Presets.map((preset, i) =>
-                        <button key={preset.name} onClick={this.handleReset} value={i}>{preset.name}</button>
-                    )}
+                    <PresetSelector options={Presets} preset={equalizer.preset} {...actions} />
                 </div>
             </div>
         );

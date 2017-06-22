@@ -6,3 +6,6 @@ export function setPower(power) {
 export function setGain(index, gain) {
     return { type: types.SET_GAIN, index, gain };
 }
+export function setPreset(name) {
+    return { type: types.SET_PRESET, name };
+}

@@ -1,0 +1,8 @@
+div.selector {
+    overflow: hidden;
+    text-align: right;
+}
+
+div.selector select {
+    width: 150px;
+}
