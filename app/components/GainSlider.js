@@ -38,13 +38,13 @@ export default class GainSlider extends Component {
             <div className={style.slider}>
                 <style dangerouslySetInnerHTML={{__html: `
                     div.${style.range} input[value="${gain}"]::-webkit-slider-runnable-track {
-                        background-size: ${(gain + 10.0) / 20.0 * 100.0}% 100%, 100%;
+                        background-size: ${(gain + 12.0) / 24.0 * 100.0}% 100%, 100%;
                     }
                 `}} />
                 <label>
                     <div className={style.label}>{label}</div>
                     <div className={style.range + ' ' + (disabled ? style.disabled : '')}>
-                        <input type="range" min="-10" max="10" step="0.1" value={gain} onChange={this.handleSliderChange} onDoubleClick={this.handleDoubleClick} />
+                        <input type="range" min="-12" max="12" step="0.1" value={gain} onChange={this.handleSliderChange} onDoubleClick={this.handleDoubleClick} />
                     </div>
                 </label>
                 <div className={style.value}>{text}</div>
