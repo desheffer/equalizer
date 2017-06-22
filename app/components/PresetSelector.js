@@ -19,14 +19,12 @@ export default class PresetSelector extends Component {
         const { options, preset } = this.props;
 
         return (
-            <div className={style.selector}>
-                <select onChange={this.handleChange} value={preset}>
-                    <option value="">Manual</option>
-                    {options.map((option) =>
-                        <option key={option.name} value={option.name}>{option.name}</option>
-                    )}
-                </select>
-            </div>
+            <select className={style.select} onChange={this.handleChange} value={preset}>
+                <option value="">Manual</option>
+                {options.map((option) =>
+                    <option key={option.name} value={option.name}>{option.name}</option>
+                )}
+            </select>
         );
     }
 }

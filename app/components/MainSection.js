@@ -19,16 +19,20 @@ export default class MainSection extends Component {
         return (
             <div>
                 <header className={style.header}>
-                    <h1>Equalizer</h1>
-                    <PowerSlider power={equalizer.power} {...actions} />
+                    <div className={style.left}>
+                        <PowerSlider power={equalizer.power} {...actions} />
+                    </div>
+                    <div className={style.left}>
+                        <h1>Equalizer</h1>
+                    </div>
+                    <div className={style.right}>
+                        <PresetSelector options={Presets} preset={equalizer.preset} {...actions} />
+                    </div>
                 </header>
                 <div className={style.equalizer}>
                     {Bands.map((band, i) =>
                         <GainSlider key={band.freq} index={i} label={band.label} gain={equalizer.gains[i]} disabled={!equalizer.power} {...actions} />
                     )}
-                </div>
-                <div className={style.presets}>
-                    <PresetSelector options={Presets} preset={equalizer.preset} {...actions} />
                 </div>
             </div>
         );

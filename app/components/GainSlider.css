@@ -18,6 +18,7 @@ div.range {
 div.range input {
     -webkit-appearance: none;
     background: none;
+    height: 35px;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%) rotate(-90deg);
@@ -48,10 +49,6 @@ div.range input::-webkit-slider-thumb {
     height: 24px;
     margin-top: -12px;
     width: 24px;
-}
-
-div.range input:focus {
-    outline: none; /* TODO: fix 32 band from being default selected */
 }
 
 div.value {

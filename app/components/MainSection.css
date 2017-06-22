@@ -5,23 +5,23 @@ header.header {
     padding: 5px;
 }
 
-header.header h1 {
+header.header div.left {
     float: left;
+}
+
+header.header div.right {
+    float: right;
+}
+
+header.header h1 {
     font-size: 1.5em;
     font-weight: bold;
-    padding: 5px;
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
 div.equalizer {
     margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 5px;
-    text-align: center;
-}
-
-div.presets {
-    background-color: #ccc;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
     margin-top: 10px;
     padding: 5px;
     text-align: center;
