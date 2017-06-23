@@ -26,7 +26,7 @@ export default class MainSection extends Component {
                         <h1>Equalizer</h1>
                     </div>
                     <div className={style.right}>
-                        <PresetSelector options={Presets} preset={equalizer.preset} {...actions} />
+                        <PresetSelector options={Presets} preset={equalizer.preset} disabled={!equalizer.power} {...actions} />
                     </div>
                 </header>
                 <div className={style.equalizer}>
