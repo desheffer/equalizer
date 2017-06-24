@@ -22,6 +22,7 @@ export default class PresetSelector extends Component {
         return (
             <select className={style.select} onChange={this.handleChange} value={preset} disabled={disabled}>
                 <option value="">Manual</option>
+                <option disabled="disabled">──────────</option>
                 {options.map((option) =>
                     <option key={option.name} value={option.name}>{option.name}</option>
                 )}
