@@ -5,3 +5,7 @@ chrome.storage.local.get('state', (obj) => {
 
     chrome.browserAction.setIcon({ path });
 });
+
+if (process.env.NODE_ENV === 'development') {
+    chrome.browserAction.setBadgeText({ text: 'DEV' });
+}
