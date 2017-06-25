@@ -43,7 +43,7 @@ export default class GainSlider extends Component {
                 `}} />
                 <label>
                     <div className={style.label}>{label}</div>
-                    <div className={style.range + ' ' + (disabled ? style.disabled : '')}>
+                    <div className={style.range}>
                         <input type="range" min="-12" max="12" step="0.1" value={gain} disabled={disabled} onChange={this.handleSliderChange} onDoubleClick={this.handleDoubleClick} />
                     </div>
                 </label>

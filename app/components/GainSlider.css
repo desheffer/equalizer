@@ -43,7 +43,7 @@ div.range input::-webkit-slider-runnable-track {
     padding: 4px 0;
 }
 
-div.range.disabled input::-webkit-slider-runnable-track {
+div.range input[disabled]::-webkit-slider-runnable-track {
     background: linear-gradient(to left, #aaa 0%, #999 100%) 0 0 repeat-y, #ccc;
 }
 
