@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import PowerSlider from '../components/PowerSlider';
+import PowerToggle from '../components/PowerToggle';
 import GainSlider from './GainSlider';
 import PresetSelector from './PresetSelector';
 import Bands from '../constants/Bands';
@@ -20,7 +20,7 @@ export default class MainSection extends Component {
             <div>
                 <header className={style.header}>
                     <div className={style.left}>
-                        <PowerSlider power={equalizer.power} {...actions} />
+                        <PowerToggle power={equalizer.power} {...actions} />
                     </div>
                     <div className={style.left}>
                         <h1>Equalizer</h1>

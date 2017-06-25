@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import style from './PowerSlider.css';
+import style from './PowerToggle.css';
 
-export default class PowerSlider extends Component {
+export default class PowerToggle extends Component {
     static propTypes = {
         power: PropTypes.bool.isRequired,
         setPower: PropTypes.func.isRequired,
@@ -20,7 +20,7 @@ export default class PowerSlider extends Component {
         return (
             <label className={style.switch}>
                 <input type="checkbox" checked={power} onChange={this.handlePowerToggle} />
-                <div className={style.slider}></div>
+                <div className={style.toggle}></div>
             </label>
         );
     }

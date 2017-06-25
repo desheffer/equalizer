@@ -9,7 +9,7 @@ label.switch input {
     display: none;
 }
 
-div.slider {
+div.toggle {
     background: linear-gradient(to bottom, #999 0%, #aaa 100%);
     border-radius: 17px;
     bottom: 0;
@@ -21,7 +21,7 @@ div.slider {
     transition: 0.4s;
 }
 
-div.slider:before {
+div.toggle:before {
     background: linear-gradient(to bottom, #eee 0%, white 100%);
     border-radius: 50%;
     border: 1px solid white;
@@ -35,14 +35,14 @@ div.slider:before {
     width: 24px;
 }
 
-input:checked + div.slider {
+input:checked + div.toggle {
     background: linear-gradient(to bottom, #16a085 0%, #1abc9c 100%);
 }
 
-input:focus + div.slider:before {
+input:focus + div.toggle:before {
     box-shadow: 0 0 5px #1abc9c;
 }
 
-input:checked + div.slider:before {
+input:checked + div.toggle:before {
     transform: translateX(26px);
 }
