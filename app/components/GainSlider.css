@@ -50,13 +50,12 @@ div.range input[disabled]::-webkit-slider-runnable-track {
 div.range input::-webkit-slider-thumb {
     -webkit-appearance: none;
     background: linear-gradient(to left, #eee 0%, white 100%);
-    border-radius: 50%;
     border: 1px solid white;
     box-shadow: -1px 0 1px #999;
     cursor: ns-resize;
-    height: 24px;
-    margin-top: -12px;
-    width: 24px;
+    height: 20px;
+    margin-top: -10px;
+    width: 28px;
 }
 
 div.value {
